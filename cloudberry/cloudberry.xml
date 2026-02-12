@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Cloudberry</Name>
-  <Repository>gareth259/cloudberry:latest</Repository>
-  <Registry>https://hub.docker.com/r/gareth259/cloudberry</Registry>
+  <Repository>tindralabs/cloudberry:latest</Repository>
+  <Registry>https://hub.docker.com/r/tindralabs/cloudberry</Registry>
   <Branch>
     <Tag>latest</Tag>
     <TagDescription>Latest stable release</TagDescription>
@@ -13,7 +13,7 @@
   <Support/>
   <Overview>Cloudberry syncs and organises your iCloud Photo Library locally. Browse, search, and download your photos through a clean web interface.</Overview>
   <Category>MediaApp:Photos Cloud: Productivity:</Category>
-  <Icon>https://raw.githubusercontent.com/gareth259/cloudberry/main/docker/icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/tindralabs/unraid-templates/main/cloudberry/icon.png</Icon>
   <WebUI>http://[IP]:[PORT:6585]</WebUI>
   <ExtraParams>--restart=unless-stopped</ExtraParams>
   <Config Name="Web UI Port" Target="8080" Default="6585" Mode="tcp" Description="Port for the Cloudberry web interface." Type="Port" Display="always" Required="true" Mask="false">6585</Config>
