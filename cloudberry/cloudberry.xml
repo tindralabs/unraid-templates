@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Cloudberry</Name>
+  <Repository>gareth259/cloudberry:latest</Repository>
+  <Registry>https://hub.docker.com/r/gareth259/cloudberry</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview>Cloudberry syncs and organises your iCloud Photo Library locally. Browse, search, and download your photos through a clean web interface.</Overview>
+  <Category>MediaApp:Photos Cloud: Productivity:</Category>
+  <Icon>https://raw.githubusercontent.com/gareth259/cloudberry/main/docker/icon.png</Icon>
+  <WebUI>http://[IP]:[PORT:6585]</WebUI>
+  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <Config Name="Web UI Port" Target="8080" Default="6585" Mode="tcp" Description="Port for the Cloudberry web interface." Type="Port" Display="always" Required="true" Mask="false">6585</Config>
+  <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cloudberry" Mode="rw" Description="Stores the database, thumbnails, and app configuration." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cloudberry</Config>
+  <Config Name="Photos" Target="/photos" Default="/mnt/user/cloudberry-storage" Mode="rw" Description="Where synced photos are stored. Point this to your preferred storage location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/cloudberry-storage</Config>
+</Container>
