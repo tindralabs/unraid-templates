@@ -23,5 +23,5 @@
   <Config Name="Photos" Target="/photos" Default="/mnt/user/cloudberry-storage" Mode="rw" Description="Where synced photos are stored. Point this to your preferred storage location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/cloudberry-storage</Config>
   <Config Name="Master Key" Target="MASTER_KEY" Default="" Mode="" Description="Encryption key for iCloud credentials. Generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="Your timezone (e.g. America/New_York, Europe/London)." Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
-  <Config Name="License Server" Target="LICENSE_API_URL" Default="https://tindralabs.com" Mode="" Description="License server URL for premium features." Type="Variable" Display="advanced" Required="false" Mask="false">https://tindralabs.com</Config>
+  <Config Name="License Server" Target="LICENSE_API_URL" Default="https://license.tindralabs.com" Mode="" Description="License server URL for premium features." Type="Variable" Display="advanced" Required="false" Mask="false">https://license.tindralabs.com</Config>
 </Container>
