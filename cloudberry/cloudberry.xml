@@ -10,9 +10,9 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/tindralabs/cloudberry/issues</Support>
+  <Support>https://forums.unraid.net/topic/197486-docker-cloudberry-self-hosted-photo-sync-organiser-icloud-google-photos/</Support>
   <Project>https://github.com/tindralabs/cloudberry</Project>
-  <Overview>Cloudberry syncs and organises your iCloud Photo Library locally. Browse, search, and download your photos through a clean web interface. Free tier: 1,000 photos per account. Premium: unlimited.</Overview>
+  <Overview>Cloudberry syncs your photo libraries from iCloud and Google Photos to local storage. Browse, search, organise, and download your photos through a clean web interface with timeline, albums, map view, and more. Free tier: 1,000 photos. Premium: unlimited ($4.99/month).</Overview>
   <Category>MediaApp:Photos Cloud: Productivity:</Category>
   <Icon>https://raw.githubusercontent.com/tindralabs/unraid-templates/main/cloudberry/icon.png</Icon>
   <WebUI>http://[IP]:[PORT:6585]</WebUI>
@@ -21,7 +21,7 @@
   <Config Name="Web UI Port" Target="8080" Default="6585" Mode="tcp" Description="Port for the Cloudberry web interface." Type="Port" Display="always" Required="true" Mask="false">6585</Config>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cloudberry" Mode="rw" Description="Stores the database, thumbnails, and app configuration." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cloudberry</Config>
   <Config Name="Photos" Target="/photos" Default="/mnt/user/cloudberry-storage" Mode="rw" Description="Where synced photos are stored. Point this to your preferred storage location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/cloudberry-storage</Config>
-  <Config Name="Master Key" Target="MASTER_KEY" Default="" Mode="" Description="Encryption key for iCloud credentials. Generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Master Key" Target="MASTER_KEY" Default="" Mode="" Description="Encryption key for account credentials. Generate with: openssl rand -hex 32" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="Your timezone (e.g. America/New_York, Europe/London)." Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
   <Config Name="License Server" Target="LICENSE_API_URL" Default="https://license.tindralabs.com" Mode="" Description="License server URL for premium features." Type="Variable" Display="advanced" Required="false" Mask="false">https://license.tindralabs.com</Config>
 </Container>
