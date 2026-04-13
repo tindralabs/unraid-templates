@@ -17,7 +17,7 @@
   <Icon>https://raw.githubusercontent.com/tindralabs/unraid-templates/main/cloudberry/icon.png</Icon>
   <WebUI>http://[IP]:[PORT:6585]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/tindralabs/unraid-templates/main/cloudberry/cloudberry.xml</TemplateURL>
-  <ExtraParams>--restart=unless-stopped</ExtraParams>
+  <ExtraParams>--restart=unless-stopped --pids-limit=8192</ExtraParams>
   <Config Name="Web UI Port" Target="8080" Default="6585" Mode="tcp" Description="Port for the Cloudberry web interface." Type="Port" Display="always" Required="true" Mask="false">6585</Config>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/cloudberry" Mode="rw" Description="Stores the database, thumbnails, and app configuration." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cloudberry</Config>
   <Config Name="Photos" Target="/photos" Default="/mnt/user/cloudberry-storage" Mode="rw" Description="Where synced photos are stored. Point this to your preferred storage location." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/cloudberry-storage</Config>
